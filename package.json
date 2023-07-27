@@ -10,8 +10,6 @@
   "author": "soncn1999",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.6.3",
-    "node-sass": "^8.0.0",
-    "owl.carousel": "^2.3.4"
+    "node-sass": "^8.0.0"
   }
 }
