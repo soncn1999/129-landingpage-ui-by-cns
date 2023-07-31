@@ -7,6 +7,10 @@
 html {
   font-size: 10px; }
 
+:root {
+  --primary-color-1st: #c82027;
+  --primary-color-2nd: #f2d776; }
+
 .mobile,
 .tablet,
 .pc {
@@ -28,6 +32,7 @@ html {
   background-color: #fff;
   position: fixed;
   z-index: 100;
+  height: 160px;
   top: 0;
   left: 0;
   right: 0;
@@ -60,7 +65,7 @@ html {
       .header-page__top-right__social-list {
         display: flex; }
       .header-page__top-right__social-item {
-        background-color: #0554f2;
+        background-color: var(--primary-color-1st);
         margin: 8px 5px;
         border-radius: 3px;
         width: 38px;
@@ -95,7 +100,7 @@ html {
         color: #ccc;
         background-color: #f1f1f1; }
         .header-page__bottom .search-container__input:focus {
-          border: 2px solid rgba(0, 123, 255, 0.3); }
+          border: 2px solid rgba(200, 32, 39, 0.3); }
       .header-page__bottom .search-container__icon {
         position: absolute;
         color: #000;
@@ -105,7 +110,7 @@ html {
         top: 100px;
         cursor: pointer; }
   .header-page__item {
-    color: #0554f2;
+    color: var(--primary-color-1st);
     font-size: 1.6rem; }
     .header-page__item-social-network {
       font-size: 1.6rem;
@@ -162,7 +167,7 @@ html {
     font-size: 1.5rem;
     padding: 15px 30px;
     font-weight: 600;
-    background-color: #0554f2;
+    background-color: var(--primary-color-1st);
     border-radius: 5px;
     width: 30%;
     cursor: pointer; }
@@ -214,7 +219,7 @@ html {
       display: block;
       text-align: center;
       border-radius: 25px;
-      background-color: #0554f2;
+      background-color: var(--primary-color-1st);
       cursor: pointer; }
     .banner-page__appointment .form-filed__input {
       width: 100%;
@@ -258,7 +263,7 @@ html {
       position: absolute;
       padding: 10px 10px;
       color: #ffffff;
-      background-image: linear-gradient(90deg, #0554f2 35%, #9000fe 100%);
+      background-image: linear-gradient(90deg, var(--primary-color-1st) 35%, var(--primary-color-2nd) 100%);
       border-bottom-right-radius: 20px;
       width: 264px;
       top: 75%;
@@ -280,7 +285,7 @@ html {
       flex: 2; }
     .experience__separate-bottom {
       flex: 1;
-      background-color: #0554f2;
+      background-color: var(--primary-color-1st);
       border-radius: 10px; }
   .experience__content {
     flex: 1;
@@ -289,7 +294,7 @@ html {
       font-size: 1.8rem;
       font-weight: 600;
       text-transform: uppercase;
-      color: #0554f2; }
+      color: var(--primary-color-1st); }
     .experience__content-title {
       font-size: 3.5rem;
       font-weight: 600;
@@ -309,7 +314,7 @@ html {
         font-size: 17px;
         background: rgba(5, 84, 242, 0.06);
         border-radius: 50%;
-        color: #0554f2; }
+        color: var(--primary-color-1st); }
       .experience__content-item__title {
         color: #0e2258;
         font-weight: 600;
@@ -329,7 +334,7 @@ html {
       font-size: 1.8rem;
       font-weight: 900;
       text-transform: uppercase;
-      color: #0554f2 !important;
+      color: var(--primary-color-1st) !important;
       margin: auto; }
     .content-block .content-title-2nd {
       font-size: 3.5rem;
@@ -343,11 +348,11 @@ html {
       display: flex; }
       .content-block .content__line-spacing-1st {
         width: 15px;
-        border-bottom: 3px solid #0554f2;
+        border-bottom: 3px solid var(--primary-color-1st);
         margin-right: 4px; }
       .content-block .content__line-spacing-2nd {
         width: 60px;
-        border-bottom: 3px solid #0554f2; }
+        border-bottom: 3px solid var(--primary-color-1st); }
   .content-block--with-background {
     padding: 120px 178px !important;
     background-color: #ecf6fa;
@@ -372,7 +377,7 @@ html {
       color: #fff;
       top: -484px;
       display: flex;
-      background-image: linear-gradient(90deg, rgba(5, 84, 242, 0.7) 35%, rgba(144, 0, 254, 0.7) 100%); }
+      background-image: linear-gradient(90deg, rgba(200, 32, 39, 0.7) 35%, rgba(246, 221, 123, 0.4) 100%); }
   .contact-wrapper {
     display: flex;
     padding: 120px 0; }
@@ -489,7 +494,7 @@ html {
     .service-item__header-icon {
       font-size: 60px;
       padding-right: 10px;
-      color: #0554f2; }
+      color: var(--primary-color-1st); }
   .service-item__content {
     font-size: 1.5rem;
     line-height: 1.6rem;
@@ -502,7 +507,7 @@ html {
     align-items: center;
     font-weight: 600; }
     .service-item__footer:hover {
-      color: #0554f2;
+      color: var(--primary-color-1st);
       cursor: pointer; }
     .service-item__footer-title {
       font-size: 1.5rem;
@@ -557,10 +562,10 @@ html {
       cursor: pointer;
       text-align: center; }
       .member-item__icon-item--active {
-        background-color: #0554f2;
+        background-color: var(--primary-color-1st);
         color: #fff; }
       .member-item__icon-item:hover {
-        background-color: #0554f2;
+        background-color: var(--primary-color-1st);
         color: #fff; }
 
 .news {
@@ -574,7 +579,7 @@ html {
     border: 1px solid #ccc; }
     .news-item__date {
       color: #fff;
-      background-color: #0554f2;
+      background-color: var(--primary-color-1st);
       font-size: 1.5rem;
       font-weight: 700;
       padding: 5px 10px;
@@ -674,7 +679,7 @@ html {
         border-radius: 50%;
         color: #fff;
         position: absolute;
-        background-image: linear-gradient(90deg, #0554f2 35%, #9000fe 100%);
+        background-image: linear-gradient(90deg, var(--primary-color-1st) 35%, #9000fe 100%);
         top: 0;
         left: 86px; }
     .review-item__user-name {
@@ -693,7 +698,7 @@ html {
   margin: 0 160px; }
   .contact-info__title {
     text-transform: uppercase;
-    color: #0554f2;
+    color: var(--primary-color-1st);
     font-size: 1.8rem;
     font-weight: 700;
     width: 100%;
@@ -726,7 +731,7 @@ html {
       font-size: 1.6rem;
       font-weight: 600;
       padding: 15px 45px;
-      background-color: #0554f2;
+      background-color: var(--primary-color-1st);
       border-radius: 25px;
       color: #fff;
       width: 167px; }
