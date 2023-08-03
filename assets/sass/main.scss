@@ -12,6 +12,7 @@ html {
 :root {
     --primary-color-1st: #c82027;
     --primary-color-2nd: #f2d776;
+    --primary-text-color-1st: #0e2258;
 }
 
 // ===================Responsive==================
@@ -42,7 +43,7 @@ html {
     background-color: #fff;
     position: fixed;
     z-index: 100;
-    height: 160px;
+    height: 110px;
     top: 0;
     left: 0;
     right: 0;
@@ -56,7 +57,7 @@ html {
         background-repeat: no-repeat;
         width: 200px;
         height: 90px;
-        margin: 16px 0;
+        margin: 10px 0;
     }
     &__content {
         width: 86%;
@@ -70,7 +71,7 @@ html {
         justify-content: flex-end;
         font-size: 1.4rem;
         font-weight: 600;
-        color: #0e2258;
+        color: var(--primary-text-color-1st);
         .border-spacing {
             border-right: 1px solid #ccc;
             padding: 0 5px;
@@ -114,10 +115,10 @@ html {
                 }
                 &-list {
                     position: absolute;
-                    // display: none;
+                    display: none;
                     width: 100px;
                     background-color: #f1f1f1;
-                    right: -8px;
+                    right: -10px;
                     border-radius: 5px;
                     top: 54px;
                     &::after {
@@ -207,9 +208,14 @@ html {
             font-size: 1.5rem;
             font-weight: 600;
             text-transform: uppercase;
+            padding: 0 20px;
             & a {
                 text-decoration: none;
-                color: #0e2258;
+                color: var(--primary-text-color-1st);
+                padding-bottom: 5px;
+                &:hover {
+                    border-bottom: 3px solid var(--primary-color-1st);
+                }
             }
         }
     }
@@ -227,7 +233,7 @@ html {
     width: 100vw;
     height: 100vh;
     &__img {
-        margin-top: 139px;
+        margin-top: 115px;
         background-image: url("../img/banner/banner1.jpeg");
         background-size: cover;
         background-position: center;
@@ -244,8 +250,8 @@ html {
             background-repeat: no-repeat;
             height: 100%;
             width: 50%;
-            top: -193px;
-            right: -30px;
+            top: -230px;
+            right: -15px;
         }
     }
     &__content {
@@ -436,7 +442,7 @@ html {
         &-title {
             font-size: 3.5rem;
             font-weight: 600;
-            color: #0e2258;
+            color: var(--primary-text-color-1st);
             padding: 20px 0;
         }
         &-desc {
@@ -461,7 +467,7 @@ html {
             &__wrap {
             }
             &__title {
-                color: #0e2258;
+                color: var(--primary-text-color-1st);
                 font-weight: 600;
                 font-size: 1.8rem;
             }
@@ -689,7 +695,7 @@ html {
             &-title {
                 font-size: 2rem;
                 font-weight: 700;
-                color: #0e2258;
+                color: var(--primary-text-color-1st);
             }
             &-icon {
                 font-size: 60px;
@@ -750,7 +756,7 @@ html {
         &__name {
             font-size: 2rem;
             font-weight: 700;
-            color: #0e2258;
+            color: var(--primary-text-color-1st);
             text-align: center;
             padding: 20px 0;
         }
@@ -889,7 +895,7 @@ html {
             font-size: 2.2rem;
             line-height: 38px;
             font-weight: 300;
-            color: #0e2258;
+            color: var(--primary-text-color-1st);
             padding: 10px 119px;
             text-align: center;
         }
