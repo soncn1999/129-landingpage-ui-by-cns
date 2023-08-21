@@ -850,3 +850,194 @@ html {
         font-size: 1.6rem; }
       .contact-info .contact-item__detail-line-2nd {
         font-size: 1.6rem; }
+
+        .home-solutions {
+          padding: 70px 10vw;
+          overflow: hidden;
+          background-color: #f0f0f0;
+        }
+        .home-solutions__suptitle {
+          position: relative;
+          z-index: 1;
+          margin-bottom: 80px;
+          font-size: 48px;
+          font-size: 3rem;
+          font-weight:600;
+          line-height: 1.3;
+          padding-top: 155px;
+          transition: padding-top .3s;
+          color: #2a2665;
+          font-style: Gotham,sans-serif;
+        }
+        .home-solutions__nav--prev {
+          left: 126px;
+        }.home-solutions__nav--next {
+          right: 126px;
+        }
+        .home-solutions__nav {
+          width: 52px;
+          height: 52px;
+          background-color: #2a2665;
+          color: #ffffff;
+          font-size: 18px;
+          position: absolute;
+          z-index: 1;
+          margin-top: 190px;
+        }
+        .home-solutions__list{
+          display: flex;
+          height: 450px;
+          width: 250%;
+        }
+        .card-product {
+          display: flex;
+          position: relative;
+          width: 50%;
+          margin-right:45px;
+          z-index: 1;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-end;
+          padding: 60px 30px 30px;
+          background-color: #ffffff;
+          color: #2a2665;
+          text-decoration: none;
+          animation-name: moveToLeft;
+          animation-duration: 25s;
+          animation-iteration-count:infinite;
+          
+        }
+        .home-solutions__list:hover .card-product{
+          animation-name: none;
+        }
+        .h02:hover{
+          animation-name: ho2;
+        }
+        
+        
+        .card-product2 {
+          display: flex;
+          position: relative;
+          width: 50%;
+          margin-right:45px;
+          z-index: 1;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-end;
+          padding: 60px 30px 30px;
+          background-color: #ffffff;
+          color: #2a2665;
+          text-decoration: none;
+          animation-name: moveToRight;
+          animation-duration: 25s;
+          animation-iteration-count:infinite;
+        }
+        .card-product__terms {
+          display: flex;
+          align-items: center;
+          font-size: 1.2rem;
+          font-weight: 900;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+          font-family: sans-serif;
+        }
+        .card-product__terms_icon{
+          margin-right: 10px;
+        }
+        .card-product__title {
+          transition: transform .3s .1s;
+          color: #dd3464;
+          font-family: Montserrat,sans-serif;
+          font-size: 3rem;
+          font-weight: 500;
+          line-height: 1.2;
+        }
+        .card-product__excerpt {
+          margin-top: 20px;
+          transition: transform .3s,opacity .3s;
+          font-size: 20.8px;
+          font-size: 1.3rem;
+          font-weight: 500;
+          line-height: 1.6;
+          font-family: sans-serif;
+        }
+        .btn-newsroom {
+          position: relative;
+          padding: 6px 12px;
+          color: #2a2665;
+          font-family: OCR-B,sans-serif;
+          font-size: 1.3rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          margin-top: 20px;
+          background-color: #fff;
+          width: 200px;
+        }
+        .btn-newsroom:hover {
+          animation-name: moveColor;
+          animation-duration: 2s;
+        }
+        
+        .card-product__icon {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 76px;
+        }
+        .card-product__excerpt{
+          display: none;
+        }
+        .card-product:hover .card-product__excerpt{
+          display: block;
+        }
+        
+        @keyframes moveToLeft {
+          0% {right:0px;}
+          100%{right:70%;}
+        }
+        @keyframes moveToRight {
+          100% {right:0px;}
+          0%{right:70%;}
+        }
+        @keyframes moveAppear {
+          0% {width:0px;height: 0px;}
+          100%{width:40px;height: 100px;}
+        }@keyframes moveColor {
+          0% {background-color:#fff;color:#2a2665 ;}
+          100%{background-color:#2a2665;color: #fff;}
+        }
+        @keyframes static {
+          0% {right:0px;z-index: 0;}
+          100%{right:0px;z-index: 10;}
+        }
+        @keyframes ho2 {
+          0% {right:0px}
+          100%{right:500px}
+        }
+        
+        
+        #pacman {
+          width: 40px;
+          height: 100px;
+          background: #ff8800c0;
+          position: absolute;;
+          top:-40px;
+          left:-40px;
+          animation: fadeIn ease 2.2s ;
+          display: none;
+          animation-name: moveAppear;
+          animation-duration: 1.2s;
+          
+        }
+        #pacman:before {
+          content: "";
+          left: 100%;
+          width:60px;
+          height: 40px;
+          background-color: #ff8800c0;
+          position: absolute;
+        }
+        .card-product:hover #pacman {
+          display: block;
+        }
