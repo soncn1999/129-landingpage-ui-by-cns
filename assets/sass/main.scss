@@ -213,8 +213,11 @@ html {
                 text-decoration: none;
                 color: var(--primary-text-color-1st);
                 padding-bottom: 5px;
+                transition: transform 0.3s ease-out;
+                display: inline-block;
                 &:hover {
                     border-bottom: 3px solid var(--primary-color-1st);
+                    transform: translate(0, -5px);
                 }
             }
         }
