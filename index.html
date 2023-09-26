@@ -16,7 +16,7 @@
     <script src="./assets/jquery-3.6.3.min.js"></script>
 </head>
 
-<div class="container">
+<div class="container-header">
     <div class="header-page">
         <div class="header-page__logo"></div>
         <div class="header-page__content">
@@ -85,13 +85,217 @@
             <div class="header-page__bottom">
                 <ul class="header-page__bottom__menu-list">
                     <li class="header-page__bottom__menu-item">
-                        <a href="">Giới thiệu</a>
+                        <input type="radio" id="radio-check-1" value="radio-check-1" name="check-item" hidden
+                            onClick="onToggle(event)" /><br />
+                        <!-- <input type="radio" name="radio-check-1" id="radio-check-1" value="1"
+                            onclick="this.checked = !this.tag;" onmousedown="this.tag = this.checked;" /> <br /> -->
+                        <label id="header-page__bottom__menu-label" for="radio-check-1">
+                            Giới thiệu
+                        </label>
+                        <div class="header-page__bottom__submenu">
+                            <div class="menu_item_info">
+                                <div class="menu_item_info_left">
+                                    <a class="mega-menu__title" href="#">
+                                        Who are we ?
+                                    </a>
+                                    <ul class="mega-menu__list">
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/about-primx/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-1">
+                                                About PRIM'X
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/about-primx/primx-vision/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-2">
+                                                Our vision
+
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/our-certifications/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-3">
+                                                Our certifications
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/bulletins/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-4">
+                                                Security bulletins
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/about-
+                                    primx/primx-x509-certificates/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-5">
+                                                X509 certificates
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu_item_info_right">
+                                    <div class="menu_item_info_right_info">
+                                        <div class="menu_item_info_right_title">
+                                            Find the solution that meets your needs
+                                        </div>
+
+                                        <div class="menu_item_info_right_info_intro">
+                                            Whether in the office or on the move,users from your company must work in a
+                                            globally encrypted environment.
+                                        </div>
+                                        <div class="menu_item_info_right_button">
+                                            <a href="/en/bulletins/" style="color: #fff;">
+                                                click me
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="menu_item_info_right_img">
+                                        <img
+                                            src="https://cellar-c2.services.clever-cloud.com/s3.primx.eu/uploads/2023/07/PRIMX-LB-FDE-EN.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="header-page__bottom__menu-item">
-                        <a href="">Sản Phẩm</a>
+                        <input type="radio" id="radio-check-2" value="radio-check-2" name="check-item" hidden
+                            onClick="onToggle(event)" /><br />
+                        <label id="header-page__bottom__menu-label" for="radio-check-2">Sản phẩm</label>
+                        <div class="header-page__bottom__submenu">
+                            <div class="menu_item_info">
+                                <div class="menu_item_info_left">
+                                    <a class="mega-menu__title" href="#">
+                                        Who are we 2?
+                                    </a>
+                                    <ul class="mega-menu__list">
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/about-primx/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-1">
+                                                About PRIM'X
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/about-primx/primx-vision/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-2">
+                                                Our vision
+
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/our-certifications/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-3">
+                                                Our certifications
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/bulletins/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-4">
+                                                Security bulletins
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/about-
+                                    primx/primx-x509-certificates/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-5">
+                                                X509 certificates
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu_item_info_right">
+                                    <div class="menu_item_info_right_info">
+                                        <div class="menu_item_info_right_tittle">
+                                            Find the solution that meets your needs
+                                        </div>
+
+                                        <div class="menu_item_info_right_info_intro">
+                                            Whether in the office or on the move,users from your company must work in a
+                                            globally encrypted environment.
+                                        </div>
+                                        <div class="menu_item_info_right_button">
+                                            <a href="/en/bulletins/" style="color: #fff;">
+                                                click me
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <div class="menu_item_info_right_img">
+                                        <img
+                                            src="https://cellar-c2.services.clever-cloud.com/s3.primx.eu/uploads/2023/07/PRIMX-LB-FDE-EN.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="header-page__bottom__menu-item">
-                        <a href="">Dịch vụ</a>
+                        <input type="radio" id="radio-check-3" value="radio-check-3" name="check-item" hidden
+                            onClick="onToggle(event)" /><br />
+                        <label id="header-page__bottom__menu-label" for="radio-check-3">Dịch vụ</label>
+                        <div class="header-page__bottom__submenu">
+                            <div class="menu_item_info">
+                                <div class="menu_item_info_left">
+                                    <a class="mega-menu__title" href="#">
+                                        Who are we 3?
+                                    </a>
+                                    <ul class="mega-menu__list">
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/about-primx/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-1">
+                                                About PRIM'X
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/about-primx/primx-vision/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-2">
+                                                Our vision
+
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/our-certifications/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-3">
+                                                Our certifications
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/bulletins/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-4">
+                                                Security bulletins
+                                            </a>
+                                        </li>
+                                        <li class="mega-menu__list__item">
+                                            <a href="/en/about-
+                                    primx/primx-x509-certificates/" class="mega-menu__list__link"
+                                                data-informations="informations-5381-5">
+                                                X509 certificates
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu_item_info_right">
+                                    <div class="menu_item_info_right_info">
+                                        <div class="menu_item_info_right_tittle">
+                                            Find the solution that meets your needs
+                                        </div>
+
+                                        <div class="menu_item_info_right_info_intro">
+                                            Whether in the office or on the move,users from your company must work in a
+                                            globally encrypted environment.
+                                        </div>
+                                        <div class="menu_item_info_right_button">
+                                            <a href="/en/bulletins/" style="color: #fff;">
+                                                click me
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <div class="menu_item_info_right_img">
+                                        <img
+                                            src="https://cellar-c2.services.clever-cloud.com/s3.primx.eu/uploads/2023/07/PRIMX-LB-FDE-EN.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="header-page__bottom__menu-item">
                         <a href="">Use Cases</a>
@@ -109,7 +313,7 @@
             </div>
         </div>
     </div>
-</div>
+    <div class="subheader-page"></div>
 </div>
 
 <div class="banner-page">
@@ -325,12 +529,7 @@
                             </div>
 
                             <div class="service-item__content">
-                                Such on help ye some door if in. Laughter proposal laughing any son law
-                                consider. Needed
-                                except
-                                up piqued an. Sitting mistake towards his few country. You delighted two
-                                rapturous
-                                pointing.
+                                0
                             </div>
 
                             <div class="service-item__footer">

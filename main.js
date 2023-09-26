@@ -1,3 +1,6 @@
+let count = 0;
+let currentElement = '';
+
 $(document).ready(function () {
     $('.service-list .owl-carousel').owlCarousel({
         nav: true,
@@ -45,3 +48,32 @@ $(document).ready(function () {
     })
 });
 
+function onToggle(event) {
+    console.log('Start! ', count);
+    let querySelectorElement = event.target.value;
+    if (querySelectorElement && querySelectorElement == currentElement) {
+
+        let radioElement = document.getElementById(querySelectorElement);
+
+        if (count % 2 == 0) {
+            count++;
+            return;
+        }
+
+        radioElement.checked = false;
+        count++;
+
+    } else if (querySelectorElement && currentElement !== '' && querySelectorElement !== currentElement) {
+        count = 0;
+        let OldRadioElement = document.getElementById(currentElement);
+        OldRadioElement.checked = false;
+        let radioElement = document.getElementById(querySelectorElement);
+        radioElement.checked = true;
+        currentElement = querySelectorElement;
+    } else {
+        let radioElement = document.getElementById(querySelectorElement);
+        radioElement.checked = true;
+        count++;
+        currentElement = querySelectorElement;
+    }
+}
