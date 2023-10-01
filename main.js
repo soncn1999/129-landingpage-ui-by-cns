@@ -1,10 +1,15 @@
 let count = 0;
 let currentElement = '';
 
+// Handle Carousel
 $(document).ready(function () {
     $('.service-list .owl-carousel').owlCarousel({
         nav: true,
         loop: true,
+        autoplay: true,
+        autoPlaySpeed: 1000,
+        autoPlayTimeout: 1000,
+        autoplayHoverPause: true,
         items: 3,
         dots: false,
         responsive: {
@@ -45,14 +50,43 @@ $(document).ready(function () {
                 items: 1
             }
         }
-    })
+    });
+
+    $('.slider-list .owl-carousel').owlCarousel({
+        nav: true,
+        loop: true,
+        items: 3,
+        dots: true,
+        autoplay: true,
+        autoPlaySpeed: 1000,
+        autoPlayTimeout: 1000,
+        autoplayHoverPause: true,
+        animateOut: 'fadeOut',
+        animateIn: 'flipInX',
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            },
+            2000: {
+                items: 1
+            },
+            2900: {
+                items: 1
+            }
+        }
+    });
 });
 
+// Handle OpenSubmenu
 function onToggle(event) {
-    console.log('Start! ', count);
     let querySelectorElement = event.target.value;
     if (querySelectorElement && querySelectorElement == currentElement) {
-
         let radioElement = document.getElementById(querySelectorElement);
 
         if (count % 2 == 0) {
@@ -77,3 +111,19 @@ function onToggle(event) {
         currentElement = querySelectorElement;
     }
 }
+
+// const unMountPhoto = (photo_id, content_id) => {
+//     console.log('un mount >>> ', photo_id);
+//     let photoElement = document.getElementById(photo_id);
+//     photoElement.classList.add('close-element');
+//     let contentElement = document.getElementById(content_id);
+//     contentElement.classList.add('open-element');
+// }
+
+// const mountPhoto = (photo_id, content_id) => {
+//     console.log('mount >>> ', photo_id);
+//     let photoElement = document.getElementById(photo_id);
+//     photoElement.classList.remove('close-element');
+//     let contentElement = document.getElementById(content_id);
+//     contentElement.classList.remove('open-element');
+// }

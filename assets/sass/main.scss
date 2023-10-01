@@ -96,8 +96,10 @@ html {
                 display: flex;
                 line-height: 54px;
                 padding: 0 5px;
-                &:hover .header-page__top-right__language-list {
-                    display: block;
+
+                &:hover > .header-page__top-right__language-list {
+                    visibility: visible;
+                    opacity: 1;
                 }
                 &-title {
                     line-height: 54px;
@@ -116,12 +118,18 @@ html {
                 &-list {
                     z-index: 1000;
                     position: absolute;
-                    display: none;
+                    // display: none;
                     width: 100px;
                     background-color: #f1f1f1;
                     right: -10px;
                     border-radius: 5px;
                     top: 54px;
+                    //test transition
+                    visibility: hidden;
+                    opacity: 0;
+                    transition:
+                        visibility 0s,
+                        opacity 0.3s linear;
                     &::after {
                         content: "";
                         position: absolute;
@@ -297,6 +305,7 @@ html {
                         &_intro {
                             font-size: 1.6rem;
                             line-height: 24px;
+                            text-align: justify;
                         }
                     }
                     &_title {
@@ -309,12 +318,17 @@ html {
                         text-transform: uppercase;
                         font-weight: 800;
                     }
-                    &_img {
+                    &_photo {
                         flex: 1;
-                        & img {
-                            width: 400px;
-                            height: 400px;
-                            align-items: center;
+                        display: flex;
+                        &-img {
+                            align-content: center;
+                            background-image: url("../img/logo/logocty.png");
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 360px;
+                            height: 213px;
                         }
                     }
                 }
@@ -504,6 +518,41 @@ html {
     }
 }
 
+.slider-page {
+    width: 100vw;
+    height: 450px;
+    margin-top: 115px;
+    .slider-list {
+    }
+    .slider-item {
+        width: 100%;
+        height: 450px;
+        position: relative;
+        transition: 0.5s;
+        &__img {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 450px;
+        }
+        &__text {
+            position: absolute;
+            background-color: #f1f1f1;
+            padding: 8px 10px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            color: var(--primary-text-color-1st);
+            top: 50%;
+            left: 90px;
+            font-weight: 550;
+            border-radius: 5px;
+            transition: all 0.5s ease-in;
+        }
+    }
+}
+
 .experience {
     padding: 120px 200px;
     display: flex;
@@ -609,8 +658,9 @@ html {
 // Commonly used for many content block
 .content-block {
     margin: 0 178px;
-    padding: 120px 0;
-
+    padding-top: 50px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e7e7e7;
     .content {
         display: flex;
         flex-direction: column;
@@ -650,6 +700,9 @@ html {
     }
 }
 
+.content-block--expansion {
+    margin: 0 75px !important;
+}
 // =======================================================
 
 .contact {
@@ -775,73 +828,150 @@ html {
 //css carousel style
 .item {
     padding: 10px;
+    &--remove-padding {
+        padding: 0;
+    }
 }
 
 .owl-nav {
     font-size: 60px !important;
-    width: 108%;
+    width: 105%;
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 140px;
-    left: -40px;
+    top: 115px;
+    left: -30px;
     color: #cccccc !important;
+    z-index: -1000;
+}
+
+.owl-dots {
+    position: absolute;
+    left: 47%;
+    font-size: 1.8rem;
+    bottom: 0;
 }
 
 .owl-next:hover {
-    color: #000 !important;
+    color: #ccc !important;
     background-color: #fff !important;
 }
 .owl-prev:hover {
-    color: #000 !important;
+    color: #ccc !important;
     background-color: #fff !important;
 }
 
 .service-list--owl-wrapper {
     margin: 30px 0;
 }
+
+/* Feel free to change duration  */
+.animated {
+    -webkit-animation-duration: 1000 ms;
+    animation-duration: 1000 ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+/* .owl-animated-out - only for current item */
+/* This is very important class. Use z-index if you want move Out item above In item */
+.owl-animated-out {
+    z-index: 1;
+}
+/* .owl-animated-in - only for upcoming item
+  /* This is very important class. Use z-index if you want move In item above Out item */
+.owl-animated-in {
+    z-index: 0;
+}
+/* .fadeOut is style taken from Animation.css and this is how it looks in owl.carousel.css:  */
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 //=========================================================
 
 .service {
     &-list {
         display: flex;
-        padding-top: 60px;
+        padding-top: 25px;
         position: relative;
+        z-index: 1;
     }
     &-item {
-        width: 350px;
-        padding: 50px 45px;
+        width: 400px;
+        height: 300px;
+        padding: 45px 45px;
         box-shadow: 0 10px 30px 0 rgba(44, 130, 237, 0.1);
         margin: 0 15px;
+        position: relative;
+        transition: all 0.8s linear;
         &__header {
-            display: flex;
-            align-items: center;
+            // display: flex;
+            // align-items: center;
+
             &-title {
                 font-size: 2rem;
                 font-weight: 700;
                 color: var(--primary-text-color-1st);
+                padding-bottom: 10px;
+                text-align: center;
+                &:hover {
+                    opacity: 0.6;
+                    cursor: pointer;
+                }
             }
-            &-icon {
-                font-size: 60px;
-                padding-right: 10px;
-                color: var(--primary-color-1st);
-            }
+            // &-icon {
+            //     font-size: 60px;
+            //     padding-right: 10px;
+            //     color: var(--primary-color-1st);
+            // }
         }
-        &__content {
+        &__desc {
             font-size: 1.5rem;
-            line-height: 1.6rem;
+            line-height: 2rem;
             color: #666666;
-            padding: 30px 0;
+            padding-bottom: 5px;
             text-align: justify;
             font-weight: 400;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            overflow: hidden;
+            max-height: 10em;
+            line-height: 1.6em;
         }
         &__footer {
             display: flex;
             align-items: center;
             font-weight: 600;
+            padding: 3px;
+            width: 50%;
+            transition: width 0.5s ease-in;
+            cursor: pointer;
+            border-radius: 50px;
+            margin-top: 10px;
             &:hover {
-                color: var(--primary-color-1st);
-                cursor: pointer;
+                color: #fff;
+                background-color: var(--primary-color-1st);
+                width: 100%;
+            }
+            &:hover .service-item__footer-icon {
+                background-color: var(--primary-color-2nd);
+                color: #000;
             }
             &-title {
                 font-size: 1.5rem;
@@ -855,8 +985,57 @@ html {
                 font-size: 1.6rem;
             }
         }
+
+        &__background-photo {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 180px;
+        }
+        &__content {
+            visibility: hidden;
+            opacity: 0;
+            transition:
+                visibility 0s,
+                opacity 0.5s linear;
+        }
+        &:hover .service-item__background-photo {
+            display: none;
+        }
+        &:hover .service-item__content {
+            visibility: visible;
+            opacity: 1;
+        }
+        ::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 75px;
+            height: 75px;
+            background-color: transparent;
+            top: -10px;
+            left: -10px;
+            border-left: 25px solid var(--primary-color-1st);
+            border-top: 25px solid var(--primary-color-1st);
+            border-radius: 5px;
+            z-index: -100;
+            visibility: hidden;
+            opacity: 0;
+            transition:
+                visibility 0s,
+                opacity 1.5s ease-in;
+        }
+
+        &:hover ::after {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }
+// End Service Block
+
+// New Carousel CSS
 
 .member {
     padding-top: 75px;
