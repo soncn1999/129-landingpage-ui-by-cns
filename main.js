@@ -55,14 +55,17 @@ $(document).ready(function () {
     $('.slider-list .owl-carousel').owlCarousel({
         nav: true,
         loop: true,
-        items: 3,
+        items: 1,
         dots: true,
         autoplay: true,
-        autoPlaySpeed: 1000,
-        autoPlayTimeout: 1000,
+        autoPlaySpeed: 500,
+        autoPlayTimeout: 500,
         autoplayHoverPause: true,
         animateOut: 'fadeOut',
         animateIn: 'flipInX',
+        margin: 30,
+        stagePadding: 30,
+        smartSpeed: 450,
         responsive: {
             0: {
                 items: 1
